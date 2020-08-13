@@ -1,0 +1,75 @@
+<head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/items.js"></script>
+</head>
+
+<div id="head">
+      <h1>UberGains</h1>
+      <p><b>Healthy eating for maximum gains!</b></p>
+      <img src="/images/logo2.png" alt="logo" id="logo" />
+</div>
+      <div id="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/meals">Meal Packages</a></li>
+          {{#if user.firstName}}
+            <li><a href="/cart">Add to cart</a></li>
+          {{/if}}
+          {{#unless user.firstName}}
+            <li><a href="/signup">Sign Up</a></li>
+          {{/unless}}
+
+          {{#if user.firstName}}
+            <li style="float:right"><a href="/logout">Log out</a></li><div class="loggedIn"><li style="float: right;"><a href="#">Welcome: {{user.firstName}} {{user.lastName}}</a></li></div>
+          {{else}}
+            <li style="float:right"><a href="/login">Log in</a></li>
+          {{/if}}
+          <p><li>{{#each loggedIn}}
+            <div class="loggedIn">{{this}}</div>
+          {{/each}}</li></p>
+        </ul>
+      </div>
+      </br></br></br>
+      <div id="hero">
+        <h1>Pick a package, choose your meals, achieve your goal - it's that easy!</h1></br>
+        <button id="herobutton"><a href="/meals">Meals Packages</a></button>
+      </div>
+      </br></br></br>
+      <h1 style="text-align: center; font-family:Arial, Helvetica, sans-serif">Here are our top packages</h1>
+      </br></br></br>
+    <div class="card" id="card1">
+      <img src="/images/plate1.png" alt="plate1" id="image1" />
+      <div class="container">
+        <h3>High protein, low-calorie meals with a nutrient profile tuned for weight loss</h3>
+        <p>Category: Weight loss</p>
+        <p>Price $149</p>
+      </div>
+    </div>
+    <div class="card" id="card2">
+        <img src="/images/plate2.png" alt="plate2" id="image2" />
+        <div class="container">
+          <h3 class="card-text">Higher protein and calorie portions to support your muscle gain momentum</h3>
+          <p class="card-text">Category: Muscle Gain</p>
+          <p class="card-text">Price $159</p>
+        </div>
+    </div>
+    <div class="card" id="card3">
+      <img src="/images/plate3.png" alt="plate3" id="image3"/>
+      <div class="container">
+        <h3 class="card-text">High fat, low carb meals with moderate protein to achieve and sustain ketosis</h3>
+        <p class="card-text">Category: Keto</p>
+        <p class="card-text">Price $159</p>
+      </div>
+    </div>
+    <div class="card" id="card4">
+      <img src="/images/plate4.png" alt="plate2" id="image4"/>
+      <div class="container">
+        <h3 class="card-text">Low carb, nutrient-rich meals with fat-burning profiles to support fat loss</h3>
+        <p class="card-text">Category: Weight Loss</p>
+        <p class="card-text">Price $159</p>
+      </div>
+    </div>  
+  </div>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+  <footer>Brendan Polius Prosper</footer>
+        

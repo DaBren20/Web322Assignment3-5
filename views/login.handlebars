@@ -1,0 +1,43 @@
+<head>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+ <div id="head">
+      <h1>UberGains</h1>
+      <p><b>Healthy eating for maximum gains!</b></p>
+      <img src="/images/logo2.png" alt="logo" id="logo" />
+</div>
+      <div id="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/meals">Meal Packages</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+          <li style="float:right"><a href="/login">Log in</a></li>
+        </ul>
+      </div></br></br></br></br>
+            <div id="loginform"> 
+            
+            <fieldset>
+            <legend>Login:</legend>
+            <form action="/login" method="POST">
+            {{#each errorMsg}}
+              <div class="errorMsg">{{this}}</div></br>
+            {{/each}}
+            
+            <label for="email">Email Address:</label></br>
+            <input type="email" id="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" /></br>
+            {{#each errorMessages}}
+              <div class="error1">{{this}}</div>
+            {{/each}}
+            <label for="password">Password:</label></br>
+            <input type="password" id="password" name="password"></br>
+            {{#each errorMessages}}
+              <div class="error2">{{this}}</div>
+            {{/each}}
+            <a href="#">Forget your password?</a></br>
+            <button>submit</button>
+            </form>
+            </legend>
+            </fieldset>
+            </div>
+            </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+            <footer>Brendan Polius Prosper</footer>

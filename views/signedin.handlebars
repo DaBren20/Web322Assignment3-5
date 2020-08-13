@@ -1,0 +1,34 @@
+            <head>
+                    <link rel="stylesheet" href="./css/style.css" />
+            </head>
+            
+<div id="head">
+      <h1>UberGains</h1>
+      <p><b>Healthy eating for maximum gains!</b></p>
+      <img src="/images/logo2.png" alt="logo" id="logo" />
+</div>
+      <div id="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/meals">Meal Packages</a></li>
+          {{#if user.firstName}}
+            <li><a href="/cart">Add to cart</a></li>
+          {{/if}}
+          {{#unless user.firstName}}
+            <li><a href="/signup">Sign Up</a></li>
+          {{/unless}}
+
+          <li style="float:right">
+          <p>{{#each loggedIn}}
+            <div class="loggedIn">{{this}}</div>
+          {{/each}}</p></li>
+          
+          {{#if user.firstName}}
+            <li style="float:right"><a href="/logout">Log out</a></li><div class="loggedIn"><li style="float: right;"><a href="#">Welcome: {{user.firstName}} {{user.lastName}}</a></li></div>
+          {{else}}
+            <li style="float:right"><a href="/login">Log in</a></li>
+          {{/if}}
+        </ul>
+</div>
+
+<h1>you are signed in</h1>

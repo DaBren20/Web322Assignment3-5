@@ -1,0 +1,255 @@
+footer {
+    background-color: black;
+    color:white;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    float: bottom;
+}
+
+#loginform {
+    margin: auto;
+    width: 10%;
+    grid-template-columns: 0.3fr 1fr;
+    grid-gap: 20px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    border: 10px;
+    align-content: center;
+}
+
+#signupform {
+    margin: auto;
+    width: 10%;
+    grid-template-columns: 0.3fr 1fr;
+    grid-gap: 20px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    border: 10px;
+    align-content: center;
+}
+
+#logo {
+    width: 10%;
+    height: auto;
+}
+
+#image1 {
+    width: 50%;
+}
+
+#image2 {
+    width: 50%;
+}
+
+#image3 {
+    width: 50%;
+}
+
+#image4 {
+    width: 50%;
+}
+
+#head {
+    background-color: aqua;
+    background-repeat: no-repeat;
+    color: black;
+    width: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2%;
+}
+
+#hero {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header4.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    color:bisque;
+    text-decoration: black;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#items0 {
+    float: left;
+    width: 50%;
+}
+
+#items1 {
+    float: right;
+    width: 50%;
+}
+
+#items2 {
+    float: right;
+    width: 50%;
+}
+
+#items3 {
+    float: right;
+    width: 50%;
+}
+
+#items4 {
+    float: left;
+    width: 50%;
+}
+
+#items5 {
+    float: right;
+    width: 50%;
+}
+
+#items6 {
+    float: left;
+    width: 50%;
+}
+
+#items7 {
+    float: right;
+    width: 50%;
+}
+
+#mealfooter {
+    background-color: black;
+    color:white;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width:100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+li a:hover {
+    background-color: #111;
+  }
+
+#herobutton {
+    background-color: red;
+  }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .shopCard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+img {
+    border-radius: 5px 5px 0 0;
+  }
+  
+.container {
+    padding: 2px 16px;
+  }
+
+#card1 {
+      float: left;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+#card2 {
+      float: left;
+  }
+
+#card3 {
+      float: right;
+  }
+
+#card4 {
+      float: right;
+  }
+  
+#herobutton {
+    background-color: white;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+.error1 {
+      font-size: 0.9rem;
+      color: red;
+  }
+
+.error2 {
+    font-size: 0.9rem;
+    color: red;
+  }
+
+.error3 {
+    font-size: 0.9rem;
+    color: red;
+}
+
+.error4 {
+  font-size: 0.9rem;
+  color: red;
+}
+
+.error5 {
+  font-size: 0.9rem;
+  color: red;
+}
+
+.errorMsg {
+  font-size: 0.9rem;
+  color: red;
+}
+
+.loggedIn {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mongoMenu {
+  background-color: red;
+}
+
+.successMsg {
+  color: red;
+}

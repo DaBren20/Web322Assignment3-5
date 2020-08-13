@@ -1,0 +1,67 @@
+{{#if user.firstName}}
+
+<head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/items.js"></script>
+</head>
+
+<div id="head">
+      <h1>UberGains</h1>
+      <p><b>Healthy eating for maximum gains!</b></p>
+      <img src="/images/logo2.png" alt="logo" id="logo" />
+</div>
+      <div id="navigation">
+        <ul>
+
+          <li><a href="/">Home</a></li>
+          <li><a href="/meals">Meal Packages</a></li>
+          {{#if user.firstName}}
+            <li><a href="/cart">Add to cart</a></li>
+          {{/if}}
+          <li><a href="/edit">Update Meal Packages</a></li>
+          {{#unless user.firstName}}
+            <li><a href="/signup">Sign Up</a></li>
+          {{/unless}}
+
+          {{#if user.firstName}}
+            <li style="float:right"><a href="/logout">Log out</a></li><div class="loggedIn"><li style="float: right;"><a href="#">Welcome: {{user.firstName}} {{user.lastName}}</a></li></div>
+          {{else}}
+            <li style="float:right"><a href="/login">Log in</a></li>
+          {{/if}}
+          <p><li>{{#each loggedIn}}
+            <div class="loggedIn">{{this}}</div>
+          {{/each}}</li></p>
+        </ul>
+        </br></br></br></br></br></br></br></br>
+      </div>
+            <div id="loginform">
+            <fieldset>
+            <legend>Create your new meal package:</legend>
+            <form method="POST" action="/admin" >
+            {{#each successMsg}}
+              <div class="successMsg">{{this}}</div>
+            {{/each}}
+            <label for="mealName">Name:</label></br>
+            <input type="text" id="mealName" name="mealName" required/></br>
+            {{#each errorMessages}}
+              <div class="error1">{{this}}</div>
+            {{/each}}
+            <label for="price">Price:</label></br>
+            <input type="number" id="price" name="price" required/></br>
+            {{#each errorMessages}}
+              <div class="error2">{{this}}</div>
+            {{/each}}
+            <label for="description">Description:</label></br>
+            <textarea id="description" name="description" rows="4" cols="50" required>Enter your meal package description</textarea>
+            <label for="category">Category:</label></br>
+            <input type="text" id="category" name="category" /></br>
+            <label for="quantity"># of meal packages:</label></br>
+            <input type="number" id="quantity" name="quantity" /></br>
+            <input type="radio" id="topPackage" name="topPackage" />Top package?</br>
+            <input type="file" id="picture" /></br>
+            <input type="submit" value="Submit">
+            </form>
+
+{{else}}
+    <p>Error you are not logged in!</p>
+{{/if}}

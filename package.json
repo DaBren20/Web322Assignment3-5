@@ -1,0 +1,31 @@
+{
+  "name": "web322",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "MIT",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.0",
+    "client-sessions": "^0.8.0",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.0",
+    "mongoose": "^5.9.25",
+    "nodemailer": "^6.4.8",
+    "nodemailer-mailgun-transport": "^2.0.0",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1"
+  }
+}

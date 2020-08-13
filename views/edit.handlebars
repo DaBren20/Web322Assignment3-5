@@ -1,0 +1,49 @@
+<head>
+    <script src="./js/items.js"></script>
+</head>
+
+<body>
+<div id="head">
+      <h1>UberGains</h1>
+      <p><b>Healthy eating for maximum gains!</b></p>
+      <img src="/images/logo2.png" alt="logo" id="logo" />
+</div>
+
+<div id="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/meals">Meal Packages</a></li>
+          {{#if user.firstName}}
+            <li><a href="/cart">Add to cart</a></li>
+          {{/if}}
+          <li><a href="/shoppingCart">Shopping Cart</a></li>
+          {{#unless user.firstName}}
+            <li><a href="/signup">Sign Up</a></li>
+          {{/unless}}
+        {{#if user.firstName}}
+            <li style="float:right"><a href="/logout">Log out</a></li><div class="loggedIn"><li style="float: right;"><a href="#">Welcome: {{user.firstName}} {{user.lastName}}</a></li></div>
+          {{else}}
+            <li style="float:right"><a href="/login">Log in</a></li>
+          {{/if}}
+
+        </ul>
+</div>
+
+<h1>Please choose a meal package to update!</h1></br>
+
+{{#each data}}
+    <div class="card" id="card1">
+      <img src="/images/plate1.png" alt="plate1" id="image1" />
+      <div class="container">
+        <h3>{{this.mealName}}</h3>
+        <p>{{this.description}}</p>
+        <p>{{this.category}}</p>
+        <p>Price: ${{this.price}}</p>
+        <p>Quantity: {{this.quantity}}</p>
+        <button><a href="/update/{{this.id}}?method=PUT">Edit</a></button>
+
+      </div>
+    </div>
+
+{{/each}}
+</body>

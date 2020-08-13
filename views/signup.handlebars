@@ -1,0 +1,57 @@
+            <head>
+                    <link rel="stylesheet" href="./css/style.css" />
+            </head>
+            
+<div id="head">
+      <h1>UberGains</h1>
+      <p><b>Healthy eating for maximum gains!</b></p>
+      <img src="/images/logo2.png" alt="logo" id="logo" />
+</div>
+      <div id="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/meals">Meal Packages</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+          <li style="float:right"><a href="/login">Log in</a></li>
+          <p><li>{{#each loggedIn}}
+            <div class="loggedIn">{{this}}</div>
+          {{/each}}</li></p>
+        </ul>
+      </div>
+            </br></br></br>
+            <div id="loginform">
+            <fieldset>
+            <legend>Create your account:</legend>
+            <form method="POST" action="/signup" >
+            <label for="firstname">First Name:</label></br>
+            <input type="text" id="firstname" name="firstname" /></br>
+            {{#each errorMessages}}
+              <div class="error1">{{this}}</div>
+            {{/each}}
+            <label for="lastname">Last Name:</label></br>
+            <input type="text" id="lastname" name="lastname" /></br>
+            {{#each errorMessages}}
+              <div class="error2">{{this}}</div>
+            {{/each}}
+            <label for="email">Email Address:</label></br>
+            <input type="text" id="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" /></br>
+            {{#each errorMessages}}
+              <div class="error3">{{this}}</div>
+            {{/each}}
+            <label for="password">Password:</label></br>
+            <input type="password" id="password" name="password" ></br>
+            {{#each errorMessages}}
+              <div class="error4">{{this}}</div>
+            {{/each}}
+
+            {{#each errorMessages}}
+              <div class="error5">{{this}}</div>
+            {{/each}}
+            </br>
+            <input type="submit" value="Submit">
+            </form>
+            </legend>
+            </fieldset>
+            </div>
+            </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+            <footer>Brendan Polius Prosper</footer>
